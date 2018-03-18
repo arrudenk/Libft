@@ -65,7 +65,8 @@ SRC = ft_memset.c \
 		ft_strtrim.c \
 		ft_manywords.c \
 		ft_isupper.c \
-		ft_islower.c
+		ft_islower.c \
+		get_next_line.c
 OBJ = ft_memset.o \
 		ft_bzero.o \
 		ft_memcpy.o \
@@ -117,7 +118,8 @@ OBJ = ft_memset.o \
 		ft_strtrim.o \
 		ft_manywords.o \
 		ft_isupper.o \
-		ft_islower.o
+		ft_islower.o \
+		get_next_line.o
 
 all: $(NAME)
 

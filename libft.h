@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   Libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arrudenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -16,7 +16,9 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <fcntl.h>
 
+# define BUFF_SIZE 10000000
 # define W_SPACE(x) (x == ' ' || x == '\t' || x == '\r' || x == '\f')
 
 int				ft_atoi(const char *str);
@@ -98,5 +100,15 @@ int				ft_manywords(char const *str, char c);
 int				ft_isupper(int c);
 int				ft_islower(int c);
 char			*ft_strndup(const char *s1, size_t n);
+
+typedef struct		s_tail
+{
+	char			*str;
+	int				fd;
+	struct s_tail	*next;
+}					t_tail;
+
+int					get_next_line(const int fd, char **line);
+
 
 #endif
